@@ -4,6 +4,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     // Sanitize and validate form data
     $name = htmlspecialchars($_POST["name"], ENT_QUOTES, 'UTF-8');
     $subject = htmlspecialchars($_POST["subject"], ENT_QUOTES, 'UTF-8');
+    $phone = htmlspecialchars($_POST["phone"], ENT_QUOTES, 'UTF-8');
     $email = filter_var($_POST["email"], FILTER_SANITIZE_EMAIL);
     $message = htmlspecialchars($_POST["message"], ENT_QUOTES, 'UTF-8');
 
@@ -28,6 +29,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         <body>
             <p><strong>Name:</strong> $name</p>
             <p><strong>Email:</strong> $email</p>
+            <p><strong>Phone:</strong> $phone</p>
             <p><strong>Subject:</strong> $subject</p>
             <p><strong>Message:</strong> $message</p>
         </body>
