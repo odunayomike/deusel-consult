@@ -27,6 +27,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             <title>$subject</title>
         </head>
         <body>
+            <p><b>This mail is coming from the contact page</b></p><br><br>
             <p><strong>Name:</strong> $name</p>
             <p><strong>Email:</strong> $email</p>
             <p><strong>Phone:</strong> $phone</p>
