@@ -388,6 +388,7 @@
               success: function (response) {
                 $("#response").html(response);
                 $("#response-empty-field").hide();
+                $("#contact-form")[0].reset();
               },
             });
           }
